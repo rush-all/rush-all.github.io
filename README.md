@@ -6,7 +6,7 @@
 
 ## 演示
 
-[网页演示地址]([https://github.com/rush-all/rush-all.github.io.git/](https://rush-all.github.io/))
+[网页演示地址](https://rush-all.github.io/)
 
 在手机或平板或电脑上查看该网页。
 
