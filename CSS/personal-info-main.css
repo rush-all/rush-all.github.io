@@ -61,6 +61,7 @@ html {
     background: rgb(26, 145, 65);
     transition: 0.55s;
     z-index: 2;
+    border-radius: 20rem;
 }
 
 .page-header .navbar {
