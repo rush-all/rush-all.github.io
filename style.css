@@ -1,0 +1,131 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.drop-zone-active {
+    border-color: #4f46e5 !important;
+    background-color: #eef2ff;
+}
+
+.comparison-line {
+    display: grid;
+    grid-template-columns: 60px 1fr 1fr;
+    gap: 1rem;
+    padding: 0.5rem;
+    border-bottom: 1px solid #e5e7eb;
+    transition: background-color 0.2s;
+}
+
+.comparison-line:hover {
+    background-color: #f9fafb;
+}
+
+.line-number {
+    color: #6b7280;
+    text-align: right;
+    user-select: none;
+}
+
+.line-content {
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    overflow-x: auto;
+    white-space: pre;
+}
+
+.line-same {
+    background-color: #f9fafb;
+}
+
+.line-diff {
+    background-color: #fef2f2;
+}
+
+.line-added {
+    background-color: #f0fdf4;
+}
+
+.line-removed {
+    background-color: #fff7ed;
+}
+
+.hex-byte {
+    display: inline-block;
+    margin-right: 0.25rem;
+}
+
+.hex-byte-diff {
+    background-color: #fca5a5;
+    padding: 0 0.125rem;
+    border-radius: 0.125rem;
+    font-weight: bold;
+}
+
+.comparison-header {
+    display: grid;
+    grid-template-columns: 60px 1fr 1fr;
+    gap: 1rem;
+    padding: 0.75rem 0.5rem;
+    background-color: #f3f4f6;
+    font-weight: 600;
+    border-bottom: 2px solid #d1d5db;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+#comparison-result {
+    max-height: 600px;
+    overflow-y: auto;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+}
+
+.loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 滚动条样式 */
+#comparison-result::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+#comparison-result::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+#comparison-result::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+#comparison-result::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
